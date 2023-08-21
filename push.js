@@ -18,7 +18,7 @@ async function runCommand(cmd) {
 async function main() {
   await runCommand('mdbook build wiki').catch(console.log);
   await runCommand('git add .').catch(console.log);
-  await runCommand('git commit -m "Update"').catch(console.log);
+  await runCommand('git commit -m "Wiki : Update"').catch(console.log);
   await runCommand('git push origin main');
 }
 
