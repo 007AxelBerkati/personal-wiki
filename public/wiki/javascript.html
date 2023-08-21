@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - Personal Wiki</title>
-        <base href="/">
+        <title>Javascript - Personal Wiki</title>
 
 
         <!-- Custom HTML head -->
@@ -84,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="internet.html"><strong aria-hidden="true">1.</strong> Internet</a></li><li class="chapter-item expanded "><a href="javascript.html"><strong aria-hidden="true">2.</strong> Javascript</a></li><li class="chapter-item expanded "><a href="githubrepo.html"><strong aria-hidden="true">3.</strong> Github-Repo</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="internet.html"><strong aria-hidden="true">1.</strong> Internet</a></li><li class="chapter-item expanded "><a href="javascript.html" class="active"><strong aria-hidden="true">2.</strong> Javascript</a></li><li class="chapter-item expanded "><a href="githubrepo.html"><strong aria-hidden="true">3.</strong> Github-Repo</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,14 +166,35 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="javascript"><a class="header" href="#javascript">Javascript</a></h1>
+<p><strong>Exect Command Nodejs</strong></p>
+<pre><code class="language-js">async function runCommand(cmd) {
+  console.log('\x1b[32m%s\x1b[0m', '+ ' + cmd);
+  return new Promise((resolve, reject) =&gt; {
+    exec(cmd, (error, stdout, stderr) =&gt; {
+      if (error) {
+        reject(error.message);
+      }
+      if (stderr) {
+        reject(stderr);
+      }
+      resolve(stdout);
+    });
+  });
+}
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="internet.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next" href="githubrepo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -182,7 +202,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="internet.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next" href="githubrepo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
